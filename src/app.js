@@ -1,11 +1,16 @@
 const express=require('express')
 const app=express()
+
+
+
+
 const path=require('path')
 const hbs= require('hbs')
+
 const geocode= require('./utils/geocode.js')
 const forecast= require('./utils/forecast.js') 
 
-
+const port=process.env.PORT || 3000
 const { get } = require('http')
 
 
@@ -103,4 +108,4 @@ app.get('/*',(req, res)=>{
         name: 'Daniel'
     })
 })
-app.listen('3000',()=>{console.log('SERVER IS RUNNING IN PORT 3000')})
+app.listen(port,()=>{console.log('SERVER IS RUNNING IN PORT'+port)})
