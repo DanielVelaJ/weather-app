@@ -86,7 +86,7 @@ app.get('/weather', (req,res)=>{
 })
 
 app.get('/help',(req,res)=>{
-    res.render('Help',{
+    res.render('help',{
         title:'Help page',
         help:'this is very useful help for you',
         name: 'Daniel'
